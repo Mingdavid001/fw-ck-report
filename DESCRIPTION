@@ -1,0 +1,10 @@
+Package: fwckreport
+Title: Fresh-Weight Inhibition vs CK with Dunnett
+Version: 0.0.1
+Authors@R: person("Ming", "David", role = c("aut", "cre"), email = "placeholder@example.com")
+Description: Turn pot-trial fresh weight into inhibition vs CK and Dunnett contrasts; optional one-page HTML report. Free core; paid seats buy written judgment receipts, not analysis ops.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 4.1)
+Imports: rstatix, dplyr, readr, rmarkdown
+Suggests: knitr
