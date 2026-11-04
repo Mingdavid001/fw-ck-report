@@ -12,8 +12,10 @@ Not included:
 - Custom pipelines, private forks, or “run the analysis for me” ops
 - Unpaid consulting hours
 
-Pricing (draft, CNY / EUR parallel):
-- Lab seat: aligned to ~€490 / seat / year (Datanovia Teams anchor)
-- Contact for institutional invoicing
+## Pricing
 
-See README Support section for Sponsors tiers.
+- **Lab seat:** ~€490 / seat / year (Datanovia Teams anchor)
+- **How to buy:** open a GitHub Issue with label intent `seat-inquiry` — [new issue](https://github.com/Mingdavid001/fw-ck-report/issues/new). CNY / EUR parallel on invoice.
+- **Sponsors:** not yet enabled for this account (payout region / fiscal host pending). Seat sales do not wait on Sponsors.
+
+See README Support section for the intended Sponsors tier ladder.
