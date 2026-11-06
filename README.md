@@ -55,6 +55,23 @@ render_fw_report(
 
 Long CSV (`rep,treatment,fresh_weight_g`) still works with `--design=long` (default).
 
+
+## Methods footnote / ARRIVE-lite (--methods-footnote)
+
+Optional HTML footer for pot-trial design transparency (Card 6). `--arrive-lite` is an alias.
+
+`ash
+Rscript exec/fw-ck-report.R --methods-footnote \
+  --input=inst/extdata/example_fw.csv --out=fw-ck-report.html
+`
+
+Injects:
+
+1. **Methods sentence** (locked English): fresh weight per pot vs untreated control (CK) with Dunnett; percent inhibition calculated *after* analysis from treatment and CK means as `(CK mean − treatment mean)/CK mean × 100`; no pairwise t-tests among treatments; `n` filled from the table (constant n, or range / per-treatment when n varies).
+2. **Judgment-receipt checklist** (warn only, does not hard-fail): n pots (experimental unit = pot); named CK + Dunnett vs CK; inhibition from post-hoc means; flag if input looks like per-pot Abbott already tested.
+3. Seat CTA pointing at Issues `seat-inquiry` (same path as Support above).
+
+Plant-pot ARRIVE-lite only — CK, n, Dunnett, inhibition formula. No animal items. Does not add `--letters`; asterisks vs CK only.
 ## Example
 
 A pot trial came in with fresh-weight vs CK but no Dunnett plan. `fw-ck-report` turned the CSV into an inhibition table + one-page HTML; the paid seat was a written call on whether the design was report-ready - not running the analysis for them.
@@ -90,4 +107,4 @@ MIT - see [LICENSE](LICENSE). Institutional commercial use: [COMMERCIAL.md](COMM
 
 ## Status
 
-MVP: long + asymmetric (`--design=asymmetric`) flatten → inhibition → Dunnett → HTML (v0.0.2). Pricing wall live (inquiry path). GitHub Sponsors enrollment when payout is available.
+MVP: long + asymmetric (`--design=asymmetric`) flatten → inhibition → Dunnett → HTML; optional `--methods-footnote` / `--arrive-lite` ARRIVE-lite footer (v0.0.3). Pricing wall live (inquiry path). GitHub Sponsors enrollment when payout is available.
