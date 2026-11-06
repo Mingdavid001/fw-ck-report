@@ -71,7 +71,7 @@ Injects:
 2. **Judgment-receipt checklist** (warn only, does not hard-fail): n pots (experimental unit = pot); named CK + Dunnett vs CK; inhibition from post-hoc means; flag if input looks like per-pot Abbott already tested.
 3. Seat CTA pointing at Issues `seat-inquiry` (same path as Support above).
 
-Plant-pot ARRIVE-lite only — CK, n, Dunnett, inhibition formula. No animal items. Does not add `--letters`; asterisks vs CK only.
+Plant-pot ARRIVE-lite only — CK, n, Dunnett, inhibition formula. No animal items. Does not add `--letters`. Dunnett asterisks belong on panel A (fresh weight) only; panel B (inhibition from means) is descriptive and is not tested again.
 ## Example
 
 A pot trial came in with fresh-weight vs CK but no Dunnett plan. `fw-ck-report` turned the CSV into an inhibition table + one-page HTML; the paid seat was a written call on whether the design was report-ready - not running the analysis for them.

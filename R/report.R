@@ -100,8 +100,8 @@ render_fw_report <- function(csv_path,
       n = as.integer(n[names(mu)]),
       fw_mean = as.numeric(mu),
       fw_se = as.numeric(se[names(mu)]),
-      inhibition_pct_mean = as.numeric(inhib[names(mu)]),
       dunnett_vs_ck = as.character(stars[names(mu)]),
+      inhibition_pct_mean = as.numeric(inhib[names(mu)]),
       stringsAsFactors = FALSE
     )
   }
@@ -132,10 +132,10 @@ render_fw_report <- function(csv_path,
     })
     panel_html <- paste0(
       "<h2>Fig-style panels (A) fresh weight mean±SE vs CK; ",
-      "(B) % inhibition + Dunnett asterisks</h2>\n",
+      "(B) % inhibition from post-analysis means (descriptive; no second test)</h2>\n",
       "<p>Asterisks mark Dunnett vs ", esc(res$control),
       " on fresh weight (* P&lt;0.05, ** P&lt;0.01, *** P&lt;0.001); ",
-      "not compact letter display. Inhibition is from treatment/",
+      "stars belong to panel A only, not compact letter display. Panel B is descriptive from treatment/",
       esc(res$control), " means after analysis.</p>\n",
       "<table><thead><tr>",
       paste0("<th>", esc(names(sum_tab)), "</th>", collapse = ""),
